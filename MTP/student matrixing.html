@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+  <title>student matrixing</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css\bootstrap.min.css">
+  <link rel="stylesheet" href="css\bootstrap.css">
+  <link rel="stylesheet" href="css\bootstrap-grid.css">
+  <link rel="stylesheet" href="css\bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css\bootstrap-reboot.css">
+  <link rel="stylesheet" href="css\bootstrap-reboot.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js\bootstrap.bundle.js"></script>
+  <script src="js\bootstrap.bundle.min.js"></script>
+  <script src="js\bootstrap.js"></script>
+  <script src="js\bootstrap.min.js"></script>
+</head>
+<body class="container-fluid">
+	<!--<h1> <font color="dodgerblue"><center> CCA Activities</center></font>
+	</h1><br>--><br>
+	<h1 style="color:dodgerblue;"><center> Student Matrixing</center></h1><br>
+	<form>
+		<div class="form-group">
+			<div class="container">
+			<div class="row">
+				<div class="col-sm-1">
+				</div>
+				<div class="col-sm-3">
+					<label for="studentname"><b>Student Name:</b></label>
+					<input class="form-control" id="studentname" type="text">
+				</div>
+				<div class="col-sm-2">
+					<label for="rollno"><b>Roll No.:</b></label>
+					<input class="form-control" id="rollno" type="text">
+				</div>
+				<div class="col-sm-2">
+					<label for="year"><b>Select Year:</b></label>
+					<select class="form-control" id="year">
+						<option>Select</option>
+						<option>I</option>
+						<option>II</option>
+						<option>III</option>
+						<option>IV</option>
+					</select>
+				</div><br>
+				<div class="col-sm-2">
+					<label for="semester"><b>Select Semester:</b></label>
+					<select class="form-control" id="semester">
+						<option>select</option>
+						<option>I</option>
+						<option>II</option>
+					</select>
+				</div>
+				<div class="col-sm-1">
+				</div>
+			</div>
+			</div><br><center>
+			<table class="table table-responsive">
+				<div class="row">
+					<thead>
+					<tr rowspan="2">
+						<div class="col-sm-3"><th>year</th></div>
+						<div class="col-sm-3"><th>Name of Student Met</th></div>
+						<div class="col-sm-2"><th>Date</th></div>
+						<div class="col-sm-4"><th>Comments</th></div>
+						
+						</tr>
+					</thead>
+					</div>
+					<tbody>
+						<tr>
+							<div class="row">
+								<div class="col-sm-3"><td>I year(Session-II)</td></div>
+								<div class="col-sm-3"><td><input class="form-control" id="signplacement" type="text"><br>
+								<input class="form-control" id="signplacement" type="text"><br><input class="form-control" id="signplacement" type="text"></td></div>
+								<div class="col-sm-2"><td><input class="form-control" id="signtraining" type="date"></td></div>
+								<div class="col-sm-4"><td><textarea class="form-control" rows="6" cols="70" id="comments"></textarea></td></div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-3"><td>II year(Session-I)</td></div>
+								<div class="col-sm-3"><td><input class="form-control" id="signplacement" type="text"><br>
+								<input class="form-control" id="signplacement" type="text"><br><input class="form-control" id="signplacement" type="text"></td></div>
+								<div class="col-sm-2"><td><input class="form-control" id="signtraining" type="date"></td></div>
+								<div class="col-sm-4"><td><textarea class="form-control" rows="6" cols="70" id="comments"></textarea></td></div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-3"><td>(Session-II)</td></div>
+								<div class="col-sm-3"><td><input class="form-control" id="signplacement" type="text"><br>
+								<input class="form-control" id="signplacement" type="text"><br><input class="form-control" id="signplacement" type="text"></td></div>
+								<div class="col-sm-2"><td><input class="form-control" id="signtraining" type="date"></td></div>
+								<div class="col-sm-4"><td><textarea class="form-control" rows="6" cols="50" id="comments"></textarea></td></div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-3"><td>III year(Session-I)</td></div>
+								<div class="col-sm-3"><td><input class="form-control" id="signplacement" type="text"><br>
+								<input class="form-control" id="signplacement" type="text"><br><input class="form-control" id="signplacement" type="text"></td></div>
+								<div class="col-sm-2"><td><input class="form-control" id="signtraining" type="date"></td></div>
+								<div class="col-sm-4"><td><textarea class="form-control" rows="6" cols="50" id="comments"></textarea></td></div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-3"><td>(Session-II)</td></div>
+								<div class="col-sm-3"><td><input class="form-control" id="signplacement" type="text"><br>
+								<input class="form-control" id="signplacement" type="text"><br><input class="form-control" id="signplacement" type="text"></td></div>
+								<div class="col-sm-2"><td><input class="form-control" id="signtraining" type="date"></td></div>
+								<div class="col-sm-4"><td><textarea class="form-control" rows="6" cols="50" id="comments"></textarea></td></div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-3"><td>IV year(Session-I)</td></div>
+								<div class="col-sm-3"><td><input class="form-control" id="signplacement" type="text"><br>
+								<input class="form-control" id="signplacement" type="text"><br><input class="form-control" id="signplacement" type="text"></td></div>
+								<div class="col-sm-2"><td><input class="form-control" id="signtraining" type="date"></td></div>
+								<div class="col-sm-4"><td><textarea class="form-control" rows="6" cols="50" id="comments"></textarea></td></div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-3"><td>(Session-II)</td></div>
+								<div class="col-sm-3"><td><input class="form-control" id="signplacement" type="text"><br>
+								<input class="form-control" id="signplacement" type="text"><br><input class="form-control" id="signplacement" type="text"></td></div>
+								<div class="col-sm-2"><td><input class="form-control" id="signtraining" type="date"></td></div>
+								<div class="col-sm-4"><td><textarea class="form-control" rows="6" cols="50" id="comments"></textarea></td></div>
+							</div>
+						</tr>
+						<tr>
+							<div class="row">
+								<div class="col-sm-3"><td>I year(Session-II)</td></div>
+								<div class="col-sm-3"><td><input class="form-control" id="signplacement" type="text"><br>
+								<input class="form-control" id="signplacement" type="text"><br><input class="form-control" id="signplacement" type="text"></td></div>
+								<div class="col-sm-2"><td><input class="form-control" id="signtraining" type="date"></td></div>
+								<div class="col-sm-4"><td><textarea class="form-control" rows="6" cols="50" id="comments"></textarea></td></div>
+							</div>
+						</tr>
+						
+						</tbody>
+						
+						</table></center>
+		<center>
+				<button type="submit" class="btn btn-primary">Save</button>
+				<button type="reset" class="btn btn-info">Reset</button>
+			</center>
+</body>
+</html>

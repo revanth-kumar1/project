@@ -1,0 +1,145 @@
+ <html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>VNR VJIET-MTP </title>
+ 
+<!--=====================================CSS links===============================================-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css"  type="text/css">
+  <link rel="stylesheet" href="vendor/datatables/dataTables.bootstrap4.css" >
+  <link href="css/sb-admin.css" rel="stylesheet">
+  <link rel="stylesheet" href="css\bootstrap.min.css">
+  <link rel="stylesheet" href="css\bootstrap.css">
+  <link rel="stylesheet" href="css\bootstrap-grid.css">
+  <link rel="stylesheet" href="css\bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css\bootstrap-reboot.css">
+  <link rel="stylesheet" href="css\bootstrap-reboot.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="icon" href="images/icons/favicon.ico" type="image/png" />
+  <!--date css links-->
+  <link href="css/bootstrap-date-edit.css" rel="stylesheet">
+  <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <!--modal--->
+  <link href="css/jquery.modal.css" rel="stylesheet">
+<!--===============================================================================================-->  
+  
+</head>
+ 
+ <body>
+ <!-- main content-->
+	  <!--h1> <font color="dodgerblue"><center>ECA Activities</center></font>
+	</h1>-->
+	<form action="ecaactivities" method="post" target="display_frame">
+		<div class="container-table100">
+		<div class="container">
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-2">
+				</div>
+				<div class="col-sm-2">
+					<label for="rollno"><b>Roll No.:</b></label>
+					<input class="form-control" id="id_rollno" name="rollno" type="text">
+				</div>
+				<div class="col-sm-3">
+					<label for="studentname"><b>Student Name:</b></label>
+					<input class="form-control" id="id_studentname" name="studentname" type="text">
+				</div>
+				<!--<div class="col-sm-2">
+					<label for="year"><b>Year:</b></label>
+					<select class="form-control subsearch" id="year" name="year">
+						<option value="Select" hidden>Select</option>
+						<option value ="1" id='1'>I</option>
+						<option value ="2" id='2'>II</option>
+						<option value ="3" id='3'>III</option>
+						<option value ="4" id='4'>IV</option>
+					</select>
+				</div>
+				<!--<div class="col-sm-2">
+					<label for="semester"><b>Select Semester:</b></label>
+					<select class="form-control" id="semester">
+						<option>Select</option>
+						<option value ="1">I</option>
+						<option value ="2">II</option>
+					</select>
+				</div>-->
+				<!--<div class="col-sm-2">
+					<br>
+					<button type="submit" class="btn btn-primary" name="search" id="search" disabled title="Choose Year and Semester to enable">Search</button>
+				</div>
+				<div class="col-sm-2">
+				</div>
+			</div></div>--><br><br>
+			
+			<br><br><br>
+			<table class="table table-hover" id='data'>
+				<thead>
+					<div class="row">					
+						<tr class="table100-head theadrow">
+							<div class="col-sm-2"><th><center>ECA Activity</center></th></div>
+							<div class="col-sm-8"><th><center>Interests and Participation</center></th></div>
+							<div class="col-sm-2"><th><center></center></th></div>
+						</tr>
+					</div>
+				</thead>
+				<tbody>
+					<div class="row">
+						<tr class="tbodyrow">
+							<div class="col-sm-2">
+								<td>
+									<input type="hidden" id='eca1' name="eca1">
+									<select class="form-control subsave-drop" id="eca" name="eca_activities">
+											<option hidden>Select</option>
+											<option  id='1'>Literary Activities</option>
+											<option id='2'>Music Activities</option>
+											<option  id='3'>Performing Arts</option>
+											<option  id='4'>Creative Arts</option>
+											<option  id='5'>Sintillashunz</option>
+											<option  id='6'>Games & Sports</option>
+											<option  id='7'>NSS</option>
+											<option  id='8'>Celebrations</option>
+											<option id='9'>Other Activities</option>
+									</select>
+								</td>
+							</div>
+							<div class="col-sm-8">
+								<td><textarea class="form-control subsave-area normal" rows="2" cols="70" id="interests" name="interests" maxlength="2000"></textarea><p id="max_interests">0/2000</p></td>
+							</div>
+							<div class='col-sm-2'>
+								<td>
+									<button type="submit" class="btn btn-primary" name="save" id="save" disabled title=""  onclick="document.getElementById('eca').value = 'Select';document.getElementById('interests').value= '';document.getElementById('max_interests').innerHTML = '0/1000';">
+										Save
+									</button>
+									<button type="reset" class="btn btn-info" onclick="document.getElementById('eca').value = 'Select';document.getElementById('interests').value= '';document.getElementById('max_interests').innerHTML = '0/1000';">
+										Reset
+									</button>
+								</td>
+							</div>
+							<textarea id="id_interests1" name="interests1" style='display:none'></textarea>
+						</tr>
+						</div>	
+					</tbody>
+				</table>
+				<br>
+				<h3>View Records</h3>
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="empty.html" name="display_frame"></iframe>
+				</div>			
+	</form>
+	</div>
+	</div>
+	</br>
+      
+     </div>
+</body>	 
+</html>

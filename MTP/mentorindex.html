@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>VNRVJIET-MTP</title>
+  <!--=====================================CSS links===============================================-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css"  type="text/css">
+  <link rel="stylesheet" href="vendor/datatables/dataTables.bootstrap4.css" >
+  <link href="css/sb-admin.css" rel="stylesheet">
+  <link rel="stylesheet" href="css\bootstrap.min.css">
+  <link rel="stylesheet" href="css\bootstrap.css">
+  <link rel="stylesheet" href="css\bootstrap-grid.css">
+  <link rel="stylesheet" href="css\bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css\bootstrap-reboot.css">
+  <link rel="stylesheet" href="css\bootstrap-reboot.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="icon" href="images/icons/favicon.ico" type="image/png" />
+  <!--date css links-->
+  <link href="css/bootstrap-date-edit.css" rel="stylesheet">
+  <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+<!--===============================================================================================-->  
+</head>
+
+<body class="fixed-nav sticky-footer bg-success" style="background-color: rgb(234, 235, 237);" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">VNRVJIET - MTP</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" data-spy="scroll" id="navbarResponsive" >
+		
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion" style="overflow-y:auto;" height='100%'>
+	  
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="index.html">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Mentoring">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+            <i class="fa fa-users"></i>
+            <span class="nav-link-text">Mentoring</span>
+          </a>	
+          <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+            <li>
+              <a href="login.html">Mentor - Mentee</a>
+            </li>
+            <li>
+              <a href="record_of_mentor_mentee_meetings.html">Mentor - Mentee Meetings</a>
+            </li>
+			<li>
+              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2">Induction Record</a>
+              <ul class="sidenav-third-level collapse" id="collapseMulti2">
+                <li>
+                  <a href="#">Day - 1</a>
+                </li>
+                <li>
+                  <a href="#">Day - 2</a>
+                </li>
+                <li>
+                  <a href="#">Day - 3</a>
+                </li>
+				<li>
+                  <a href="#">Day - 4</a>
+                </li>
+				<li>
+                  <a href="#">Day - 5</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="forgot-password.html">Student Master Information</a>
+            </li>
+            <li>
+              <a href="swot_analysis.html">SWOT Analysis</a>
+            </li>
+			<li>
+              <a href="attendance.html">Attendance</a>
+            </li>
+			<li>
+              <a href="internalsmarks.html">Internal Marks</a>
+            </li>
+			<li>
+              <a href="mentor_reviews.html">Mentor Reviews</a>
+            </li>
+			<li>
+              <a href="internalassessmentrecord.html">Internal Assessment Record</a>
+            </li>
+			<li>
+              <a href="semesterendexaminationresult.html">Semester End Examination Result</a>
+            </li>
+          </ul>
+        </li>
+		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="ECA & CCA">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+            <i class="fa fa-futbol-o"></i>
+            <span class="nav-link-text">ECA & CCA</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseComponents">
+            <li>
+              <a href="industrialvisit.html">Industrial Visits</a>
+            </li>
+            <li>
+              <a href="outstationtechnical.html">Outstation Technical Visits</a>
+            </li>
+			<li>
+              <a href="summertraining.html">Summer Training Visits</a>
+            </li>
+			<li>
+              <a href="cca_activities.html">CCA Activities</a>
+            </li>
+			<li>
+              <a href="eca_activities.html">ECA Activities</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Training & Placement">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
+            <i class="fa fa-handshake-o"></i>
+            <span class="nav-link-text">Training & Placement</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMulti">
+            <li>
+              <a href="#">Cultivate Right Attitude</a>
+            </li>
+            <li>
+              <a href="#">Soft Skills</a>
+            </li>
+            <li>
+              <a href="#">Campus Interview Training</a>
+            </li>
+			<li>
+              <a href="#">Campus Interview Training Review</a>
+            </li>
+            <li>
+              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2">Assessment Report</a>
+              <ul class="sidenav-third-level collapse" id="collapseMulti2">
+                <li>
+                  <a href="#">Mock Aptitude Test</a>
+                </li>
+                <li>
+                  <a href="#">Mock Interviews</a>
+                </li>
+              </ul>
+            </li>
+			<li>
+              <a href="#">Semester End Self Assessment Report</a>
+            </li>
+			<li>
+              <a href="#">Eligibility for Placements</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+	  <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+      
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-fw fa-envelope"></i>
+            <span class="d-lg-none">Messages
+              <span class="badge badge-pill badge-primary">12 New</span>
+            </span>
+            <span class="indicator text-primary d-none d-lg-block">
+              <i class="fa fa-fw fa-circle"></i>
+            </span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="messagesDropdown">
+            <h6 class="dropdown-header">New Messages:</h6>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <strong>David Miller</strong>
+              <span class="small float-right text-muted">11:21 AM</span>
+              <div class="dropdown-message small">Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <strong>Jane Smith</strong>
+              <span class="small float-right text-muted">11:21 AM</span>
+              <div class="dropdown-message small">I was wondering if you could meet for an appointment at 3:00 instead of 4:00. Thanks!</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <strong>John Doe</strong>
+              <span class="small float-right text-muted">11:21 AM</span>
+              <div class="dropdown-message small">I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution.</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item small" href="#">View all messages</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-fw fa-bell"></i>
+            <span class="d-lg-none">Alerts
+              <span class="badge badge-pill badge-warning">6 New</span>
+            </span>
+            <span class="indicator text-warning d-none d-lg-block">
+              <i class="fa fa-fw fa-circle"></i>
+            </span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="alertsDropdown">
+            <h6 class="dropdown-header">New Alerts:</h6>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <span class="text-success">
+                <strong>
+                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+              </span>
+              <span class="small float-right text-muted">11:21 AM</span>
+              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <span class="text-danger">
+                <strong>
+                  <i class="fa fa-long-arrow-down fa-fw"></i>Status Update</strong>
+              </span>
+              <span class="small float-right text-muted">11:21 AM</span>
+              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <span class="text-success">
+                <strong>
+                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+              </span>
+              <span class="small float-right text-muted">11:21 AM</span>
+              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item small" href="#">View all alerts</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <form class="form-inline my-2 my-lg-0 mr-lg-2">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Search for...">
+              <span class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+              </span>
+            </div>
+          </form>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="breadcrumb-item active"></li>
+      </ol>
+      <!-- Icon Cards-->
+		
+		<form>
+		<div class="container-table100">
+		<div class="container">
+		<div class="form-group">
+			<div class="row">
+				<br><br><br>
+				<div class="col-sm-1">
+				</div>
+				<div class="col-sm-2">
+					<label for="rollno"><b>Roll Number</b></label>
+					<input class="form-control" id="id_rollno" name="rollno" type="text">
+				</div>
+				<div class="col-sm-3">
+					<label for="comment"><b>Select MTP</b></label><br>
+					<select class="form-control" id='mtptype'>
+						<option hidden>Select</option>
+						<option id='1' value="Mentoring">Mentoring</option>
+						<option id='2' value="ECACCA">ECA & CCA</option>
+						<option id='3' value="TrainingPlacement">Training & Placement</option>
+						<option value="StudentMatrixing">Student Matrixing</option>
+						<option value="MyJourney">My Journey</option>
+						<option value="AlumniAssociationForm">Alumni Association Form</option>
+					</select>
+				</div>
+				<div class="col-sm-4">
+					<label for='comment'>
+						<div class="row">
+							<div class="col-sm-4">
+								<b>Type  of</b>
+							</div>
+							<div class="col-sm-2">
+								<input type="text" id='mtp' size="20" style="border:none;">
+							</div>
+						</div>
+					</label>
+					<select class="form-control" name="select" id='select'>
+						<option hidden value="select">Select</option>
+					</select>
+				
+					<label for='comment'><b></b></label>
+					<select class='form-control' id='mtpselect'>
+						<option hidden value="Mentoring">Select</option>
+						<option hidden value="ECACCA">Select</option>
+						<option hidden value="TrainingPlacement">Select</option>
+						<option value="Mentoring">Mentor - Mentee Information</option>
+						<option value="Mentoring">Mentor - Mentee Overview</option>
+						<option value="Mentoring">Mentor - Mentee Meetings</option>
+						<option value="Mentoring">SWOT Analysis</option>
+						<option value="Mentoring">Attendance</option>
+						<option value="Mentoring">Mentor Reviews</option>
+						<option value="Mentoring">Marks Report</option>
+						<option value="ECACCA">Industrial Visits</option>
+						<option value="ECACCA">Outstation Technical Visits</option>
+						<option value="ECACCA">Summer Training Visits</option>
+						<option value="ECACCA">CCA Activities</option>
+						<option value="ECACCA">ECA Activities</option>
+						<option value="TrainingPlacement">VLSI</option>
+						<option value="TrainingPlacement">VLSI</option>
+						<option value="TrainingPlacement">VLSI</option>
+						<option value="TrainingPlacement">VLSI</option>
+						<option value="TrainingPlacement">VLSI</option>
+						<option value="TrainingPlacement">VLSI</option>
+						<option value="TrainingPlacement">VLSI</option>
+						<option value="StudentMatrixing">Student Matrixing</option>
+						<option value="MyJourney">My Journey</option>
+						<option value="AlumniAssociationForm">Alumni Association Form</option>
+					</select><br>
+				</div>
+				<!--<div class="col-sm-3">
+					<label for="comment"><b>Dept.Association:</b></label>
+					<select class="form-control" id="deptassociation"><option>Select</option>
+						<option>CSE</option>
+						<option>IT</option>
+						<option>CE</option>
+						<option>ECE</option>
+						<option>ME</option>
+						<option>EIE</option>
+						<option>AE</option>
+						<option>EEE</option>
+					</select>
+				</div>-->
+				<div class="col-sm-1">
+				</div>
+			</div>
+			<!--<center>
+				<button type="submit" class="btn btn-primary">Save</button>
+				<button type="reset" class="btn btn-info">Reset</button>
+			</center>-->
+		</div>
+		<!--<div class="col-sm-3">
+					<label for="semester"><b>Select Semester:</b></label>
+					<select class="form-control" id="semester">
+						<option>select</option>
+						<option>I</option>
+						<option>II</option>
+					</select>
+				</div>-->
+	</form>
+	  
+	  
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <!--<div class="text-center">
+          <small>Copyright © Your Website 2018</small>
+        </div>-->
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+	</div>
+    <!--=====================================Script links==============================================-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js\bootstrap.bundle.js"></script>
+    <script src="js\bootstrap.bundle.min.js"></script>
+    <script src="js\bootstrap.js"></script>
+    <script src="js\bootstrap.min.js"></script>
+	<script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>  
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+	<script src="js/sb-admin.min.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/select2/select2.min.js"></script>
+	<script src="js/main.js"></script>
+	<!--date scripts links-->
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="js/bootstrap-date.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+	<!--new links-->
+<!--===============================================================================================-->
+  	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#mtpselect').hide();
+			$('#select').show();
+			$('#mtptype').change(function() {
+				if ($(this).data('options') === undefined) 
+				{
+					$(this).data('options', $('#mtpselect option').clone());
+				}
+				var id = $(this).val();
+				var options = $(this).data('options').filter('[value=' + id + ']');
+				$('#mtpselect').html(options);
+				$('#mtpselect').show();
+				$('#select').hide();
+			});
+			
+			$('#mtptype').click(function(){
+				$('#mtp').val($('#mtptype').val());
+			});
+			
+		});
+	</script>
+  </div>
+  
+</body>
+
+</html>

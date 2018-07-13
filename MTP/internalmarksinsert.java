@@ -1,0 +1,105 @@
+import java.io.*;
+import java.util.*;
+import java.sql.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class internalmarksinsert extends HttpServlet
+{
+  public void service(HttpServletRequest req,HttpServletResponse res) throws ServletException,IOException
+  {
+
+	//global object declaration section
+    Connection conn = null;
+	Statement stmt = null;
+	Statement insert_stmt = null;
+	PrintWriter out = res.getWriter();
+	res.setContentType("text/html");
+	
+	
+	
+	//date calculation
+	java.util.Date date=new java.util.Date();
+	java.sql.Timestamp sqlTime=new java.sql.Timestamp(date.getTime());
+	
+	
+
+	//jdbc logic section
+	try
+    {
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		String dbURL = "jdbc:sqlserver://10.45.29.254;DatabaseName=VNR_Students_Record";
+        String user = "sa";
+        String pass = "vnrvjiet1@3";
+        conn = DriverManager.getConnection(dbURL, user, pass);
+		stmt = conn.createStatement();
+		
+
+		if(req.getParameter("save")!=null)
+		{
+			//variable declaration
+			String type=req.getParameter("exam_type");
+			
+	
+			ResultSet type_check = stmt.executeQuery("select count(Types) from Internal_Marks where Years="+year+" and Semester="+semester+" and Types='"+type+"' and Student_Code='15071A1245' ");
+			type_check.next();
+			if(type_check.getInt(1)==0)//checking type to allow only one type for one time  for each student
+			{
+
+	//insertion logic
+
+				Enumeration paramNames=req.getParameterNames();//getting all names from html page
+
+	
+				ResultSet subject_code=stmt.executeQuery("select subcode from subjectsample where year="+year+"and semester="+semester);//getting all subject codes
+				
+
+
+				//loop to insert subject code along with marks
+
+				//variables used in loop
+				String paramName;
+				String[] paramValues;
+				String paramValue_subjectmarks;
+				insert_stmt = conn.createStatement();
+				
+				for(int i=0;i<=subject_count;i++)
+				{
+					paramName = (String)paramNames.nextElement();
+					paramValues = req.getParameterValues(paramName);
+
+					// Read single valued data
+					if (paramValues.length == 1 && i!=0)//i!=0 --- to eliminate type value and start from subject values
+					{
+						subject_code.next();
+						insert_stmt.executeUpdate("insert into Internal_Marks(Student_Code,Years,Semester,Types,SubjectName,Marks,Created_On) values('15071A1245',"+year+","+semester+",'"+type+"','"+subject_code.getString(1)+"','"+paramValues[0]+"','"+sqlTime+"')");
+						
+					}	
+				}
+				out.print("<h4>Marks Inserted</h4>");
+			}
+			else
+			{
+				out.print("<h4>"+type+" marks are already inserted.To check open marks report in Mentoring Menu</h4>");
+			
+			}
+	    }
+		
+		insert_stmt.close();
+		stmt.close();
+		conn.close();
+	}
+	catch(ClassNotFoundException e)
+	{
+		
+		out.print(e);
+	
+	}
+	catch(SQLException se)
+	{
+		out.print(se);
+	
+	}
+  }	
+}
+ 
